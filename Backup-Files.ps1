@@ -13,7 +13,7 @@ Get-ChildItem -File | Where-Object {
          
          $FileName = [io.path]::GetFileNameWithoutExtension( $_.Name )  # Getting just the base name
          $FileType = [io.path]::GetExtension( $_.Name )  ##
-         $NewFileName = "Backup\$FileName" + "_" + $_.LastWriteTime.ToString("yyyy-MM-dd") + $FileType   ## 
+         $NewFileName = "Backup\$FileName" + "_" + $_.LastWriteTime.ToString("yyyy-MM-dd") + $FileType   ## Comment
         
 
          Copy-Item $_ $NewFileName }
